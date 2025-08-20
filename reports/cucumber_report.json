@@ -1,0 +1,92 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "user-login;able-to-see-an-error-message-when-an-email-and-password-is-not-provided",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "Able to see an error message when an email and password is not provided",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 385317299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 15,
+            "name": "Navigate to the homepage",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1954401999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I perform Login without an email and password",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3154891999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "I should see an error message indicating that the email is required",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:53"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3121100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "I should see an error message indicating that the password is required",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1504500
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 151957700
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "user-login",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "User Login",
+    "tags": [],
+    "uri": "test\\features\\login.feature"
+  }
+]
