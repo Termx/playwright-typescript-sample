@@ -1,0 +1,18 @@
+environments:
+  dev:
+    base_url: "https://practicesoftwaretesting.com/"
+
+    credentials:
+      good_email: "customer@practicesoftwaretesting.com"
+      good_pw: "welcome01"
+      bad_email: "fakeme@google.com"
+      bad_pw: "123456789"
+  
+  qa:
+    base_url: "https://practicesoftwaretesting.com/"
+
+    credentials:
+      good_email: "customer@practicesoftwaretesting.com"
+      good_pw: "welcome01"
+      bad_email: "fakeme@google.com"
+      bad_pw: "123456789"

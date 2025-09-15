@@ -3,19 +3,23 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "ts-node cucumber.ts"
+    "test": "ts-node cucumber.ts",
+    "report": "cucumber-html-reporter --input=reports/cucumber_report.json --output=reports/report.html"
   },
   "dependencies": {
+    "js-yaml": "^4.1.0",
     "playwright": "^1.54.2"
   },
   "devDependencies": {
     "@cucumber/cucumber": "^12.2.0",
     "@cucumber/pretty-formatter": "^2.1.0",
     "@playwright/test": "^1.54.2",
-    "@types/node": "^24.2.1",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^24.4.0",
     "chai": "^6.0.1",
-    "cucumber-html-reporter": "^7.2.0",
+    "cucumber-html-reporter": "^6.0.0",
     "dotenv": "^17.2.1",
+    "js-yaml": "^4.1.0",
     "rimraf": "^6.0.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2"

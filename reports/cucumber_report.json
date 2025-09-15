@@ -4,6 +4,138 @@
     "elements": [
       {
         "description": "",
+        "id": "user-login;user-should-be-able-to-sign-in-successfully",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "User should be able to sign in successfully",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 374638999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "Navigate to the homepage",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 511607700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I perform Login steps",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3200377500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "I should see the user account page",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1845156799
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 118997699
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "user-login;unsuccessful-login-with-invalid-credentials",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "Unsuccessful login with invalid credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 385887699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "Navigate to the homepage",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 529864399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I perform Login with invalid credentials",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3123092800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "I should see an error message indicating invalid credentials",
+            "match": {
+              "location": "test\\steps\\login.steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1337689200
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 132814500
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
         "id": "user-login;able-to-see-an-error-message-when-an-email-and-password-is-not-provided",
         "keyword": "Scenario",
         "line": 14,
@@ -14,7 +146,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 385317299
+              "duration": 334535700
             }
           },
           {
@@ -23,11 +155,11 @@
             "line": 15,
             "name": "Navigate to the homepage",
             "match": {
-              "location": "test\\steps\\login.steps.ts:9"
+              "location": "test\\steps\\login.steps.ts:8"
             },
             "result": {
               "status": "passed",
-              "duration": 1954401999
+              "duration": 826457999
             }
           },
           {
@@ -36,11 +168,11 @@
             "line": 16,
             "name": "I perform Login without an email and password",
             "match": {
-              "location": "test\\steps\\login.steps.ts:32"
+              "location": "test\\steps\\login.steps.ts:28"
             },
             "result": {
               "status": "passed",
-              "duration": 3154891999
+              "duration": 3091120799
             }
           },
           {
@@ -49,11 +181,11 @@
             "line": 17,
             "name": "I should see an error message indicating that the email is required",
             "match": {
-              "location": "test\\steps\\login.steps.ts:53"
+              "location": "test\\steps\\login.steps.ts:43"
             },
             "result": {
               "status": "passed",
-              "duration": 3121100
+              "duration": 1795600
             }
           },
           {
@@ -62,11 +194,11 @@
             "line": 18,
             "name": "I should see an error message indicating that the password is required",
             "match": {
-              "location": "test\\steps\\login.steps.ts:59"
+              "location": "test\\steps\\login.steps.ts:47"
             },
             "result": {
               "status": "passed",
-              "duration": 1504500
+              "duration": 1465799
             }
           },
           {
@@ -74,7 +206,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 151957700
+              "duration": 134451699
             }
           }
         ],
