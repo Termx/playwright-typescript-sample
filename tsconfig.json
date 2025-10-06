@@ -10,8 +10,8 @@
     "resolveJsonModule": true,
     "sourceMap": true,
     "outDir": "dist",
-    "types": ["node", "@cucumber/cucumber"],
+    "types": ["node", "@cucumber/cucumber", "@playwright/test"],
     "ignoreDeprecations": "6.0"
   },
-  "include": ["src", "test", "cucumber.ts"]
+  "include": ["src", "test", "cucumber.ts", "playwright.config.ts"]
 }
