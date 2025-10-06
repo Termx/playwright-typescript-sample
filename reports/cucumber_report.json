@@ -4,56 +4,56 @@
     "elements": [
       {
         "description": "",
-        "id": "user-login;user-should-be-able-to-sign-in-successfully",
+        "id": "user-login;unable-to-request-a-password-reset-without-an-email-address",
         "keyword": "Scenario",
-        "line": 4,
-        "name": "User should be able to sign in successfully",
+        "line": 26,
+        "name": "Unable to request a password reset without an email address",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 374638999
+              "duration": 333701799
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 5,
-            "name": "Navigate to the homepage",
+            "line": 4,
+            "name": "I navigate to the login page",
             "match": {
               "location": "test\\steps\\login.steps.ts:8"
             },
             "result": {
               "status": "passed",
-              "duration": 511607700
+              "duration": 2150278500
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 6,
-            "name": "I perform Login steps",
+            "line": 27,
+            "name": "I request a password reset without an email address",
             "match": {
-              "location": "test\\steps\\login.steps.ts:15"
+              "location": "test\\steps\\login.steps.ts:44"
             },
             "result": {
               "status": "passed",
-              "duration": 3200377500
+              "duration": 40952999
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 7,
-            "name": "I should see the user account page",
+            "line": 28,
+            "name": "I should see password reset field display an error message",
             "match": {
-              "location": "test\\steps\\login.steps.ts:35"
+              "location": "test\\steps\\login.steps.ts:75"
             },
             "result": {
               "status": "passed",
-              "duration": 1845156799
+              "duration": 2479600
             }
           },
           {
@@ -61,152 +61,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 118997699
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "user-login;unsuccessful-login-with-invalid-credentials",
-        "keyword": "Scenario",
-        "line": 9,
-        "name": "Unsuccessful login with invalid credentials",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 385887699
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 10,
-            "name": "Navigate to the homepage",
-            "match": {
-              "location": "test\\steps\\login.steps.ts:8"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 529864399
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 11,
-            "name": "I perform Login with invalid credentials",
-            "match": {
-              "location": "test\\steps\\login.steps.ts:22"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 3123092800
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 12,
-            "name": "I should see an error message indicating invalid credentials",
-            "match": {
-              "location": "test\\steps\\login.steps.ts:39"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1337689200
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 132814500
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "user-login;able-to-see-an-error-message-when-an-email-and-password-is-not-provided",
-        "keyword": "Scenario",
-        "line": 14,
-        "name": "Able to see an error message when an email and password is not provided",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 334535700
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 15,
-            "name": "Navigate to the homepage",
-            "match": {
-              "location": "test\\steps\\login.steps.ts:8"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 826457999
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 16,
-            "name": "I perform Login without an email and password",
-            "match": {
-              "location": "test\\steps\\login.steps.ts:28"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 3091120799
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 17,
-            "name": "I should see an error message indicating that the email is required",
-            "match": {
-              "location": "test\\steps\\login.steps.ts:43"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1795600
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 18,
-            "name": "I should see an error message indicating that the password is required",
-            "match": {
-              "location": "test\\steps\\login.steps.ts:47"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1465799
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 134451699
+              "duration": 122428900
             }
           }
         ],
