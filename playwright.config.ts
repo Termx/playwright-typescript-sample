@@ -2,8 +2,10 @@ import { defineConfig, devices } from '@playwright/test';
 import * as yaml from 'js-yaml';
 import * as fs from 'fs';
 import dotenv from 'dotenv';
+import path from 'path';
 
-const config = yaml.load(fs.readFileSync('config.yaml', 'utf8')) as any;
+const configPath = path.resolve(__dirname, 'config.yaml');
+const config = yaml.load(fs.readFileSync(configPath, 'utf8')) as any;
 const env = process.env.ENVIRONMENT || 'qa';
 const environmentConfig = config.environments[env] || config.environments.dev;
 const mergedConfig = { ...config.common, ...environmentConfig };
