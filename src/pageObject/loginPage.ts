@@ -1,18 +1,24 @@
-import { Page } from '@playwright/test';
+import { Page, Locator } from '@playwright/test';
 
 export class LoginPage {
   private page: Page;
-  private loginLink: string;
-  private userEmail: string;
-  private passText: string;
-  private logInButton: string;
+  private loginLink: Locator;
+  private userEmail: Locator;
+  private passText: Locator;
+  private logInButton: Locator;
+  private forgotPasswordLink: Locator;
+  private forgotPasswordField: Locator;
+  private forgotPasswordButton: Locator;
 
   constructor(page: Page) {
     this.page = page;
-    this.loginLink = 'a[data-test="nav-sign-in"]';
-    this.userEmail = 'input[data-test="email"]';
-    this.passText = 'input[data-test="password"]';
-    this.logInButton = 'input[data-test="login-submit"]';
+    this.loginLink = page.locator('a[data-test="nav-sign-in"]');
+    this.userEmail = page.locator('input[data-test="email"]');
+    this.passText = page.locator('input[data-test="password"]');
+    this.logInButton = page.locator('input[data-test="login-submit"]');
+    this.forgotPasswordLink = page.locator("[data-test='forgot-password-link']");
+    this.forgotPasswordField = page.locator("input[id='email']");
+    this.forgotPasswordButton = page.locator("[data-test='forgot-password-submit']");
   }
 
   async openApplication(appURL?: string): Promise<void> {
@@ -22,19 +28,29 @@ export class LoginPage {
   }
 
   async clickLoginLink(): Promise<void> {
-    await this.page.click(this.loginLink);
-    await this.page.waitForTimeout(1000);
+    await this.loginLink.click();
+    await this.page.waitForLoadState('networkidle');
   }
 
   async enterLoginDetails(strUser: string, strPass: string): Promise<void> {
-    await this.page.click(this.loginLink);
-    await this.page.waitForTimeout(1000);
-    await this.page.fill(this.userEmail, strUser);
-    await this.page.fill(this.passText, strPass);
+    await this.loginLink.click();
+    await this.userEmail.fill(strUser);
+    await this.passText.fill(strPass);
   }
 
   async clickLoginButton(): Promise<void> {
-    await this.page.waitForTimeout(1000);
-    await this.page.click(this.logInButton);
+    await this.logInButton.click();
+    await this.page.waitForLoadState('networkidle');
+  }
+
+  async clickForgotPasswordLink(): Promise<void> {
+    await this.forgotPasswordLink.click();
+    await this.page.waitForLoadState('networkidle');
+  }
+
+  async requestPasswordReset(email: string): Promise<void> {
+    await this.userEmail.fill(email);
+    await this.forgotPasswordButton.click();
+    await this.page.waitForLoadState('networkidle');
   }
 }
